@@ -25,13 +25,11 @@ if __name__ == '__main__':
 
         try:
             with lock:
-                print('lock aquired')
                 dist = grovepi.ultrasonicRead(UR)
                 time.sleep(0.2)
             print("Distance:" + str(dist))
 
             with lock:
-                print('lock aquired')
                 [temp,humidity] = grovepi.dht(DHT,0)
                 time.sleep(0.2)
   
@@ -39,7 +37,6 @@ if __name__ == '__main__':
                 print("temp = %.02f C humidity =%.02f%%"%(temp, humidity))
          
             with lock:
-                print('lock aquired')
                 light_value = grovepi.analogRead(LIGHT)
                 time.sleep(0.2)
             print("Light:" + str(light_value))
@@ -47,4 +44,4 @@ if __name__ == '__main__':
         except IOError:
             print ("Error")
 
-        lcd.setText_norefresh("dist = %3dcm \ntemp=%.02f hum=%.02f" % (dist,temp,humidity))
+        lcd.setText_norefresh("dist=%3dcm \nT=%.01f H=%.01f" % (dist,temp,humidity))
