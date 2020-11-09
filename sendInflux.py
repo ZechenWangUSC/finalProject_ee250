@@ -3,8 +3,8 @@ from datetime import datetime
 import time
 
 
-def init(addr):
-	client = InfluxDBClient(addr, 8086, 'admin', 'password', 'project')
+def init(addr,db):
+	client = InfluxDBClient(addr, 8086, 'admin', 'password', db)
 	client.create_database('project')
 
 def send(measure,value):
