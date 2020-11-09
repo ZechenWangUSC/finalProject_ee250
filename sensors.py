@@ -47,7 +47,6 @@ if __name__ == '__main__':
         lcd.setText_norefresh("dist=%3dcm \nT=%.01f H=%.01f" % (dist,temp,humidity))
 
         #send data to influxdb
-        sendInflux.init('project')
         sendInflux.send('Temperature',temp)
         sendInflux.send('Humidity',humidity)
         sendInflux.send('Light',light_value)
