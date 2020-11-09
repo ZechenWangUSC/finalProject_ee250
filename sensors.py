@@ -14,7 +14,7 @@ if __name__ == '__main__':
     DHT = 3     # humidity and temp sensor, D3
     LIGHT = 0   # light sensor, A0
     lcd.setRGB(153,255,51)
-    lcd.clear()
+    lcd.setText('')
 
     grovepi.pinMode(LIGHT,"INPUT")
     lock = threading.Lock()
