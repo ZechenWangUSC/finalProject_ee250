@@ -29,7 +29,7 @@ if __name__ == '__main__':
             if math.isnan(temp) == False and math.isnan(humidity) == False:
                 print("temp = %.02f C humidity =%.02f%%"%(temp, humidity))
          
-            except IOError:
-                print ("Error")
+        except IOError:
+            print ("Error")
 
         lcd.setText_norefresh("dist = %3dcm \ntemp=%.02f hum=%.02f" % (deg,temp.humidity))
