@@ -50,6 +50,7 @@ if __name__ == '__main__':
         sendInflux.send('Temperature',temp)
         sendInflux.send('Humidity',humidity)
         sendInflux.send('Light',light_value)
+        sendInflux.send('Distance',dist)
 
 
         time.sleep(10)   #polls every 10 seconds
