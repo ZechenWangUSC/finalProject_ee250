@@ -8,6 +8,7 @@ sys.path.append('./Software/Python/grove_rgb_lcd')
 
 import grovepi
 import grove_rgb_lcd as lcd
+import sendInflux
 
 if __name__ == '__main__':
     UR = 4      # Ultrasonic ranger, D4
@@ -20,7 +21,7 @@ if __name__ == '__main__':
     lock = threading.Lock()
 
     while True:
-        time.sleep(5)   #polls every 5 seconds
+        time.sleep(10)   #polls every 10 seconds
 
         try:
             with lock:  #read ultrasonic ranger
@@ -45,3 +46,9 @@ if __name__ == '__main__':
 
         #lcd display
         lcd.setText_norefresh("dist=%3dcm \nT=%.01f H=%.01f" % (dist,temp,humidity))
+
+        #send data to influxdb
+        sendInflux.init('45.76.207.242','project')
+        sendInflux.send('Temperature',temp)
+        sendInflux.send('Humidity',humidity)
+        sendInflux.send('Light',light_value)
