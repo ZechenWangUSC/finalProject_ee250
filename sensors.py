@@ -23,14 +23,15 @@ if __name__ == '__main__':
     while True:
 
         try:
-            with lock:  #read ultrasonic ranger
-                dist = 0;
-                for i in range(1,6):
+            dist = 0;
+            for i in range(1,6):    #read ultrasonic ranger
+                with lock: 
                     get_dist = grovepi.ultrasonicRead(UR)
-                    dist += get_dist; 
+                    time.sleep(0.2)
+                dist += get_dist; 
 
-                dist /= 5;  #average on 5 polls
-                time.sleep(0.2)
+            dist /= 5;  #average on 5 polls
+
 
             print("Distance:" + str(dist))
 
