@@ -2,11 +2,11 @@ from influxdb import InfluxDBClient
 from datetime import datetime
 import time
 
-client = InfluxDBClient(addr, 8086, 'admin', 'password', db)
+ADDR = '45.76.207.242'
 
-def init(addr,db):
-	#client = InfluxDBClient(addr, 8086, 'admin', 'password', db)
-	client.create_database('project')
+client = InfluxDBClient(ADDR, 8086, 'admin', 'password', 'project')
+client.create_database('project')
+
 
 def send(measure,value):
 

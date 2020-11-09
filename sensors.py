@@ -21,7 +21,6 @@ if __name__ == '__main__':
     lock = threading.Lock()
 
     while True:
-        time.sleep(10)   #polls every 10 seconds
 
         try:
             with lock:  #read ultrasonic ranger
@@ -48,7 +47,10 @@ if __name__ == '__main__':
         lcd.setText_norefresh("dist=%3dcm \nT=%.01f H=%.01f" % (dist,temp,humidity))
 
         #send data to influxdb
-        sendInflux.init('45.76.207.242','project')
+        sendInflux.init('project')
         sendInflux.send('Temperature',temp)
         sendInflux.send('Humidity',humidity)
         sendInflux.send('Light',light_value)
+
+
+        time.sleep(10)   #polls every 10 seconds
