@@ -1,6 +1,5 @@
 from influxdb import InfluxDBClient
 from datetime import datetime
-import time
 
 ADDR = '45.76.207.242'
 
