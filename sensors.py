@@ -24,8 +24,14 @@ if __name__ == '__main__':
 
         try:
             with lock:  #read ultrasonic ranger
-                dist = grovepi.ultrasonicRead(UR)
+                dist = 0;
+                for i in range(1,6):
+                    get_dist = grovepi.ultrasonicRead(UR)
+                    dist += get_dist; 
+
+                dist /= 5;  #average on 5 polls
                 time.sleep(0.2)
+
             print("Distance:" + str(dist))
 
             with lock:  #read humidity&temp sensor
