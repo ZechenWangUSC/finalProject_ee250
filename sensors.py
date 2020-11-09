@@ -13,7 +13,6 @@ if __name__ == '__main__':
     DHT = 3     # humidity and temp sensor, D3
     lcd.setRGB(153,255,51)
 
-    grovepi.pinMode(meter, "INPUT")
 
     while True:
         #So we do not poll the sensors too quickly which may introduce noise,
@@ -32,4 +31,4 @@ if __name__ == '__main__':
         except IOError:
             print ("Error")
 
-        lcd.setText_norefresh("dist = %3dcm \ntemp=%.02f hum=%.02f" % (deg,temp.humidity))
+        lcd.setText_norefresh("dist = %3dcm \ntemp=%.02f hum=%.02f" % (dist,temp,humidity))
