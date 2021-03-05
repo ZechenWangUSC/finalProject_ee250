@@ -28,12 +28,12 @@ Instructions:
     3. install and run Grafana on your server.
     4. add InfluxDB as a source in Grafana, and the database is named 'project', no authentication used
     5. add the following query strings in Grafana dashboard:
-        '''
+        ```
         SELECT "value" FROM "Temperature" WHERE ("host" = 'Device1') AND $timeFilter
         SELECT "value" FROM "Humidity" WHERE ("host" = 'Device1') AND $timeFilter
         SELECT "value" FROM "Light" WHERE ("host" = 'Device1') AND $timeFilter
         SELECT "value" FROM "Distance" WHERE ("host" = 'Device1') AND $timeFilter
-        '''
+        ```
     6. run sensors.py on your local device, and you should see visualized data.
 
 Details on Grafana & InfluxDB configuration can be found in documentation:
