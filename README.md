@@ -6,14 +6,14 @@ This project uses **Raspberry Pi** and a sensor kit **"GrovePi"** for **real-tim
 
 ## Instructions:
 
-# **External Libraries:**
+### **External Libraries:**
   1) Grovepi library. Instructions available in document: [Grovepi](https://github.com/ZechenWangUSC/finalProject_ee250/blob/master/GrovePi%20Setup%20and%20Python%20Programming.pdf)
       
       **IMPORTANT: Please change line 10 in sensors.py to your local Grovepi Library**
   2) Influx-Python
       https://influxdb-python.readthedocs.io/en/latest/
 
-# **Setup:**
+### **Setup:**
   1. Raspberry Pi and GrovePi sensor kit are needed
   2. Use D4 for Ultrasonic ranger(optional), D3 for humidity and temperature sensor, A0 for light sensor.
   3. Run sensors.py to start application.
