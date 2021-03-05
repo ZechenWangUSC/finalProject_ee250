@@ -1,16 +1,16 @@
-#EE 250 Final Project
+# EE 250 Final Project
 By: Zechen Wang
 
 Instructions:
 
-##**External Libraries:**
+## **External Libraries:**
   1) Grovepi, instructions available in Lab2 document. 
       https://docs.google.com/document/d/17NHBwSutQN23CijD4JJJOim-Y_GUBpsduvoaBICbWlE/edit
       **IMPORTANT: Please change line 10 in sensors.py to your local Grovepi Library**
   2) Influx-Python
       https://influxdb-python.readthedocs.io/en/latest/
 
-##**Setup:**
+## **Setup:**
   1. Raspberry Pi and GrovePi sensor kit are needed
   2. Use D4 for Ultrasonic ranger, D3 for humidity and temperature sensor, A0 for light sensor.
   3. Run sensors.py to start application.
