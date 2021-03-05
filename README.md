@@ -14,12 +14,14 @@ Instructions:
   1. Raspberry Pi and GrovePi sensor kit are needed
   2. Use D4 for Ultrasonic ranger, D3 for humidity and temperature sensor, A0 for light sensor.
   3. Run sensors.py to start application.
-  **This project require a cloud server. The server used in the demo will keep running till Dec.30, 2020. **
+  
+  **This project require a cloud server. The server used in the demo will keep running till Dec.30, 2020.**
 
   - If you wish to use my server:
     1. log into http://45.76.207.242:3000, the credentials are 'admin' and 'password'
     2. find the 'project' dashboard
     3. run sensors.py on your local device, and you should see visualized data.
+       
        **IMPORTANT: You might need to change the time range on the upper right corner. Current settings are for a different timezone.**
 
   - If you wish to use your own server:
