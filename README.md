@@ -5,6 +5,7 @@ Instructions:
 
 ## **External Libraries:**
   1) Grovepi library. Instructions available in document: [Grovepi](https://github.com/ZechenWangUSC/finalProject_ee250/blob/master/GrovePi%20Setup%20and%20Python%20Programming.pdf)
+      
       **IMPORTANT: Please change line 10 in sensors.py to your local Grovepi Library**
   2) Influx-Python
       https://influxdb-python.readthedocs.io/en/latest/
