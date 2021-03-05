@@ -1,18 +1,21 @@
 # EE 250 Final Project
 By: Zechen Wang
 
-Instructions:
+## Introduction
+This project uses **Raspberry Pi** and a sensor kit **"GrovePi"** for **real-time temperature, humidity, and light intensity monitoring**. Data are collected and processed in real time on board, and then transferred to **influxDB deployed on a cloud server** for **visualization using Grafana**. Users with credentials can then access visualized data via web.
 
-## **External Libraries:**
+## Instructions:
+
+# **External Libraries:**
   1) Grovepi library. Instructions available in document: [Grovepi](https://github.com/ZechenWangUSC/finalProject_ee250/blob/master/GrovePi%20Setup%20and%20Python%20Programming.pdf)
       
       **IMPORTANT: Please change line 10 in sensors.py to your local Grovepi Library**
   2) Influx-Python
       https://influxdb-python.readthedocs.io/en/latest/
 
-## **Setup:**
+# **Setup:**
   1. Raspberry Pi and GrovePi sensor kit are needed
-  2. Use D4 for Ultrasonic ranger, D3 for humidity and temperature sensor, A0 for light sensor.
+  2. Use D4 for Ultrasonic ranger(optional), D3 for humidity and temperature sensor, A0 for light sensor.
   3. Run sensors.py to start application.
   
   **This project require a cloud server. The server used in the demo will keep running till Dec.30, 2020.**
